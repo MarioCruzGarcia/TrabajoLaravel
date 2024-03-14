@@ -87,6 +87,10 @@
                 @if(Auth::user()->rol_id == 2)
                 <h1>Eres admin de Jefatura</h1>
                     <a href="{{ url('/alumnos') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Alumnos</a>
+                    <a href="{{ url('/profesores') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Profesores</a>
+                    <a href="{{ url('/grupos') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Grupos</a>
+                    <a href="{{ url('/asignaturas') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Asignaturas</a>
+
                 @elseif(Auth::user()->rol_id == 3)
                     <h1>Eres usuario normal</h1>
                 @else
