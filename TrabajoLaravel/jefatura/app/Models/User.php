@@ -22,7 +22,14 @@ class User extends Authenticatable
         'email',
         'password',
     ];
-
+    protected static function boot()
+    {
+        parent::boot();
+ 
+        static::creating(function ($user) {
+            $user->rol_id = 3;
+        });
+    }
     /**
      * The attributes that should be hidden for serialization.
      *
